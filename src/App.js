@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import {
+  Container,
+  LightHalf,
+  DarkHalf,
+  ButtonOne,
+  ButtonTwo,
+} from "./app.styles";
+import Button from "./Button/button";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Container>
+      <LightHalf>
+        <ButtonOne
+          gradient={{
+            deg: "90deg",
+            stops: [
+              "rgba(131,58,180,1) 0%",
+              "rgba(253,29,29,1) 50%,",
+              "rgba(252,176,69,1) 100%),",
+            ],
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Hover me!
+        </ButtonOne>
+      </LightHalf>
+      <DarkHalf>
+        <ButtonTwo
+          gradient={{
+            deg: "90deg",
+            stops: [
+              "rgba(131,58,180,1) 0%",
+              "rgba(253,29,29,1) 50%,",
+              "rgba(252,176,69,1) 100%),",
+            ],
+          }}
+          text=""
+        >
+          Hover me!
+        </ButtonTwo>
+      </DarkHalf>
+    </Container>
   );
 }
 
